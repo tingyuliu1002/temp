@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+name = ['None','ATPrS', 'ATP', 'cdiGMP', 'cdiAMP']
+over = [5, 50, 16, 3, 4]
+below = [16, 14, 3, 14, 34]
+x = np.arange(len(name))
+width = 0.3
+plt.bar(x, over, width,color= '#FF7E50')
+plt.bar(x + width, below, width,color='#4169E1')
+plt.axhline(y=5,color = '#FF7E50', linestyle="dashed")
+plt.axhline(y=16,color = '#4169E1', linestyle="dashed")
+
+
+plt.xticks(x + width / 2, name,fontsize=14)
+plt.xlabel('Nucleotides',fontsize=14)
+plt.ylabel('Percentage(%)',fontsize=14)
+#plt.title('Reach Chemical Equilibrium',fontsize=20)
+plt.ylim(0,60)
+#plt.legend()
+plt.show()
