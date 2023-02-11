@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+name = [0,25,50,75,100]
+
+# over
+# cdiG=[16,10,6,6,3]
+# cdiA=[16,14,13,5,4]
+
+# middle
+# cdiG=[74,75,71,74,43]
+# cdiA=[74,73,69,83,23]
+
+# unreacted
+cdiG = [7,9,18,13,40]
+cdiA = [7,9,11,5,39]
+
+# shortened
+# cdiG=[3,6,5,7,14]
+# cdiA=[3,4,7,7,34]
+
+plt.plot(name, cdiG, color='blue', linestyle="-", linewidth="2", markersize="16", marker=".",label='cyclic di-GMP')
+plt.plot(name, cdiA, color='lightseagreen', linestyle="-", linewidth="2", markersize="16", marker="^",label='cyclic di-AMP')
+plt.axhline(y=60,color = 'gray', linestyle="dashed")
+
+plt.xlim(0, 100) # 設定 x 軸座標範圍
+plt.ylim(0, 100) # 設定 y 軸座標範圍
+
+plt.xlabel('Cyclic di-nucleotides(%)', fontsize="16") # 設定 x 軸標題內容及大小
+plt.ylabel('Percentage(%)', fontsize="16") # 設定 y 軸標題內容及大小
+plt.title('Mixed Nucleotides Unreacted Filaments', fontsize="18") # 設定圖表標題內容及大小
+
+plt.legend()
+plt.show()
